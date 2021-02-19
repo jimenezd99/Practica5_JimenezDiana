@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="40dp"
+    tools:context=".RegisterActivity">
+    
+    <ImageView
+        android:layout_width="215dp"
+        android:layout_height="65dp"
+        android:src="@drawable/hello"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="40dp"
+        android:layout_gravity="center_horizontal"
+        />
+
+    <EditText
+        android:id="@+id/et_nombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/input_margin"
+        android:inputType="text"
+        android:hint="@string/name" />
+
+    <EditText
+        android:id="@+id/et_apellido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/input_margin"
+        android:inputType="text"
+        android:hint="@string/last_name" />
+
+    <EditText
+        android:id="@+id/et_correo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/input_margin"
+        android:inputType="textWebEmailAddress"
+        android:hint="@string/email" />
+
+    <EditText
+        android:id="@+id/et_pass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/input_margin"
+        android:inputType="textPassword"
+        android:hint="@string/password" />
+
+    <CheckBox
+        android:id="@+id/cb_terms"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/input_margin"
+        android:text="@string/terms"
+        android:textStyle="italic" />
+
+    <Button
+        android:id="@+id/btn_sing_in"
+        android:layout_width="219dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/round_button"
+        android:text="@string/sing_in"
+        android:textColor="@color/dusty_white" />
+    
+</LinearLayout>
