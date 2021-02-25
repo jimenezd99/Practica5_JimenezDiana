@@ -11,8 +11,8 @@ import android.widget.ImageView
 import android.widget.ListView
 import android.widget.TextView
 
-class ProductosActivity : AppCompatActivity() {
-    var coldDrinks=ArrayList<Product>()
+class SweetActivity : AppCompatActivity() {
+    var sweets = ArrayList<Product>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,21 +20,22 @@ class ProductosActivity : AppCompatActivity() {
 
         agregaProductos()
 
-        var listV: ListView= findViewById(R.id.listView) as ListView
+        var listV: ListView = findViewById(R.id.listView) as ListView
 
-        var adaptadorC: AdaptadorProductos= AdaptadorProductos(this,coldDrinks)
+        var adaptadorSW: AdaptadorProductos= AdaptadorProductos(this,sweets)
 
-        listV.adapter=adaptadorC;
+        listV.adapter=adaptadorSW;
 
     }
 
     fun agregaProductos(){
-        coldDrinks.add(Product("Caramel Frap", R.drawable.caramelfrap, "Caramel syrup meets coffee, milk and ice and whipped cream and buttery caramel sauce layer the love on top.", 5.00))
-        coldDrinks.add(Product("Chocolate Frap", R.drawable.chocolatefrap, "Rich mocha-flavored sauce meets up with chocolaty chips, milk and ice for a blender bash.", 6.00))
-        coldDrinks.add(Product("Cold Brew", R.drawable.coldbrew, "Created by steeping medium-to-coarse ground coffee in room temperature water for 12 hours or longer.", 3.00))
-        coldDrinks.add(Product("Matcha Latte", R.drawable.matcha, "Leafy taste of matcha green tea powder with creamy milk and a little sugar for a flavor balance that will leave you feeling ready and raring to go.", 4.00))
-        coldDrinks.add(Product("Oreo Milkshake", R.drawable.oreomilkshake, "Chocolate ice cream, and oreo cookies. Topped with whipped cream with cocoa and chocolate syrup.", 7.00))
-        coldDrinks.add(Product("Peanut Milkshake", R.drawable.peanutmilkshake, "Vanilla ice cream, mixed with peanut butter and chocolate.", 7.00))
+        sweets.add(Product("Blueberry cake", R.drawable.blueberrycake, "Vanilla cake flavor, topped with cheese topping and blueberries.", 6.00))
+        sweets.add(Product("Chocolate cupcake", R.drawable.chocolatecupcake, "Chocolate cupcakes topped with butter cream and cherries", 3.00))
+        sweets.add(Product("Lemon tartalette", R.drawable.lemontartalette, "Pastry shell with a lemon flavored filling", 4.00))
+        sweets.add(Product("Red Velvet cake", R.drawable.redvelvetcake, "Soft, moist, buttery cake topped with an easy cream cheese frosting.", 6.00))
+        sweets.add(Product("Cherry cheesecake", R.drawable. strawberrycheesecake, "This cherry topped cheesecake is positively creamy and delicious and will be your new favorite dessert.", 7.00))
+        sweets.add(Product("Tiramisu", R.drawable.tiramisu, "Coffee-flavored Italian dessert", 6.00))
+
     }
 
     private class AdaptadorProductos: BaseAdapter {
@@ -48,7 +49,7 @@ class ProductosActivity : AppCompatActivity() {
 
         override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
             var prod=productos.get(position)
-            var inflador=LayoutInflater.from(contexto)
+            var inflador= LayoutInflater.from(contexto)
             var vista= inflador.inflate(R.layout.producto_view,null)
 
             var imagen= vista.findViewById(R.id.producto_img) as ImageView
@@ -78,5 +79,4 @@ class ProductosActivity : AppCompatActivity() {
 
 
     }
-
 }

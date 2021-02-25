@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal"
     android:layout_width="match_parent"
+    android:padding="@dimen/menu_buttons_padding_v"
     android:layout_height="wrap_content">
 
     <ImageView
@@ -13,6 +14,7 @@
     <LinearLayout
         android:layout_width="0dp"
         android:layout_weight="3"
+        android:padding="@dimen/input_margin"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         >
@@ -20,13 +22,19 @@
             android:id="@+id/producto_nombre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Caramel Frap"
+            android:textColor="@color/nombre"
+            android:textSize="20sp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/caramel_frap"
             />
         <TextView
             android:id="@+id/producto_desc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Descripción del producto"
+            android:text="@string/desc_del_producto"
+            android:textColor="@color/desc"
+            android:textSize="8sp"
+            android:fontFamily="sans-serif-light"
             />
     </LinearLayout>
     <TextView
@@ -34,8 +42,11 @@
         android:layout_width="0dp"
         android:layout_weight="1"
         android:layout_height="match_parent"
+        android:textColor="@color/precio"
+        android:textSize="19sp"
         android:gravity="center"
-        android:text="$5.00"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/price"
         />
 
 </LinearLayout>
